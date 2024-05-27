@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div
+    <footer
       className={`w-full h-auto lg:h-screen py-6 lg:py-12 ${styles.paddingHorizontal} bg-black text-white tracking-wide flex flex-col justify-between gap-6`}
     >
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-0">
@@ -103,7 +103,7 @@ const Footer = () => {
           Powered by Sports Wear Store
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

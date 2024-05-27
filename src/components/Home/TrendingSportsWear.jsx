@@ -3,7 +3,7 @@ import { styles } from "../../styles/styles";
 
 const TrendingSportsWear = () => {
   return (
-    <div
+    <section
       className={`py-6 lg:py-12 bg-black h-auto lg:h-screen ${styles.paddingHorizontal} tracking-wide`}
     >
       <div className="w-full h-full grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -29,7 +29,7 @@ const TrendingSportsWear = () => {
           <h2 className="text-white font-bold text-xl lg:order-1">Women</h2>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,7 +5,7 @@ import { styles } from "../../styles/styles";
 
 const Hero = () => {
   return (
-    <div className="w-screen h-auto lg:h-screen home-hero">
+    <main className="w-screen h-auto lg:h-screen home-hero">
       <Navbar />
       <div
         className={`w-full flex flex-col gap-10 ${styles.paddingHorizontal} h-5/6 justify-center py-12`}
@@ -21,7 +21,7 @@ const Hero = () => {
           <Button text={"Shop Now"} btnType={"button"} />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -4,7 +4,7 @@ import Button from "../Global/Button";
 
 const FitnessReadySection = () => {
   return (
-    <div
+    <section
       className={`py-6 lg:py-12 ${styles.paddingHorizontal} h-auto lg:h-screen w-full`}
     >
       <div className="w-full grid grid-cols-1 lg:grid-cols-3">
@@ -40,7 +40,7 @@ const FitnessReadySection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const ProductGrid = () => {
   return (
-    <div
+    <section
       className={`py-6 lg:py-12 ${styles.paddingHorizontal} flex flex-col gap-6`}
     >
       <div className="w-full flex items-center justify-between">
@@ -24,7 +24,7 @@ const ProductGrid = () => {
         <ProductCard />
         <ProductCard />
       </div>
-    </div>
+    </section>
   );
 };
 

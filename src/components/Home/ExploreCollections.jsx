@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const ExploreCollections = () => {
   return (
-    <div
+    <section
       className={`w-full pt-6 pb-12 ${styles.paddingHorizontal} flex flex-col gap-8`}
     >
       <div className="w-full text-center">
@@ -78,7 +78,7 @@ const ExploreCollections = () => {
           <h1 className="text-2xl font-semibold">Tents</h1>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

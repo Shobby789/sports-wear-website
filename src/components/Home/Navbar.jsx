@@ -4,16 +4,22 @@ import { Link } from "react-router-dom";
 import { MdShoppingCart } from "react-icons/md";
 import { LuMenu } from "react-icons/lu";
 import { IoIosClose } from "react-icons/io";
+import CartSidebar from "../Global/CartSidebar";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  const handleShowCart = () => {
+    setShowCart(!showCart);
+  };
 
   const handleNav = () => {
     setOpenNav(!openNav);
   };
 
   return (
-    <div
+    <nav
       className={`w-full ${styles.paddingHorizontal} py-6 flex items-center justify-between `}
     >
       <div className="flex items-center gap-12">
@@ -23,37 +29,38 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-6">
           <Link
             to="/shop-all"
-            className="text-white font-semibold text-sm uppercase hover:text-orange-600 transition-all duration-300"
+            className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             shop all
           </Link>
           <Link
             to="/shop-all"
-            className="text-white font-semibold text-sm uppercase hover:text-orange-600 transition-all duration-300"
+            className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             men
           </Link>
           <Link
             to="/shop-all"
-            className="text-white font-semibold text-sm uppercase hover:text-orange-600 transition-all duration-300"
+            className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             women
           </Link>
           <Link
             to="/shop-all"
-            className="text-white font-semibold text-sm uppercase hover:text-orange-600 transition-all duration-300"
+            className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             Packs & Gear
           </Link>
         </div>
       </div>
       <div className="flex items-center gap-3 lg:gap-6">
-        <p className="text-sm text-white font-semibold hover:text-orange-600 transition-all duration-300">
+        <p className="text-sm text-white font-medium hover:text-orange-600 transition-all duration-300">
           $0.00
         </p>
-        <Link to="/cart">
+        <button onClick={handleShowCart}>
           <MdShoppingCart className="text-white text-lg hover:text-orange-600 transition-all duration-300" />
-        </Link>
+        </button>
+        <CartSidebar showCart={showCart} onclick={handleShowCart} />
         <button
           className="w-9 h-9 bg-orange-600 p-2 block lg:hidden"
           onClick={handleNav}
@@ -114,7 +121,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

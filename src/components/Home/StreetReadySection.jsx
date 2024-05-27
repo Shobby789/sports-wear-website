@@ -4,7 +4,7 @@ import Button from "../Global/Button";
 
 const StreetReadySection = () => {
   return (
-    <div className={`py-6 lg:py-12 ${styles.paddingHorizontal} h-screen`}>
+    <section className={`py-6 lg:py-12 ${styles.paddingHorizontal} h-screen`}>
       <div className="w-full h-full street-ready-section relative overflow-hidden flex flex-col justify-between py-8 lg:py-16 px-8 lg:px-12">
         <h1 className="text-white font-semibold text-3xl uppercase">
           sparta<span className="text-orange-600">x</span>
@@ -20,7 +20,7 @@ const StreetReadySection = () => {
           <Button text={"shop now"} btnType={"button"} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
