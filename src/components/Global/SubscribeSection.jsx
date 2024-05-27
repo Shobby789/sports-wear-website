@@ -13,12 +13,12 @@ const SubscribeSection = () => {
           vitae pharetra.
         </p>
         <div className="w-full flex justify-center">
-          <form action="" className="flex items-center gap-2">
+          <form action="" className="w-full flex items-center gap-1">
             <input
               type="email"
               name="email"
               id="email"
-              className="py-3 px-4 border text-base lg:w-[420px] outline-none font-normal text-gray-500"
+              className="py-3 px-4 border text-base w-full lg:w-[420px] outline-none font-normal text-gray-500 rounded-none"
               placeholder="Email address"
             />
             <button className="px-4 lg:px-8 py-3.5 text-white text-sm font-medium uppercase bg-orange-600">
