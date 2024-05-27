@@ -9,7 +9,7 @@ const CategoryCard = () => {
         alt=""
         className="w-full h-full bg-conver bg-center brightness-75"
       />
-      <button className="px-6 py-2.5 rounded-full bg-gray-100 tracking-wide uppercase font-normal text-sm flex items-center gap-1 absolute bottom-10 left-10">
+      <button className="px-6 py-2.5 rounded-full bg-gray-100 tracking-wide uppercase font-normal text-sm flex items-center gap-1 absolute lg:bottom-10 bottom-5 left-5 lg:left-10">
         Clothing <HiArrowLongRight className="text-base" />
       </button>
     </div>

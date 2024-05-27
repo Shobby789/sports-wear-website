@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex flex-col md:flex-row items-start md:items-center gap-y-4 justify-between">
         <p className="text-sm font-extralight text-gray-400">
           Copyright © 2024 Sports Wear Store
         </p>
