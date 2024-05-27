@@ -4,16 +4,19 @@ import { styles } from "../../styles/styles";
 const SubscribeSection = () => {
   return (
     <section
-      className={`w-full py-6 lg:py-12 ${styles.paddingHorizontal} bg-white tracking-wide`}
+      className={`w-full py-6 lg:py-12 ${styles.paddingHorizontal} bg-white tracking-wide flex justify-center`}
     >
-      <div className="w-full flex flex-col items-center gap-6">
+      <div className="w-full flex flex-col items-center gap-6 justify-center">
         <h1 className="text-4xl font-semibold">Be The First To Know</h1>
         <p className="text-xl font-light  text-gray-500 text-center">
           Lectus amet scelerisque fusce est venenatis, eget enim dolor amet
           vitae pharetra.
         </p>
         <div className="w-full flex justify-center">
-          <form action="" className="w-full flex items-center gap-1">
+          <form
+            action=""
+            className="w-full md:w-[55%] flex items-center gap-1 justify-center"
+          >
             <input
               type="email"
               name="email"

@@ -31,7 +31,7 @@ export const routes = [
   },
   {
     title: "Home Page",
-    url: "/packs-and-gears",
+    url: "/packs-and-gear",
     page: <Layout pages={<PacksAndGear />} />,
   },
   {

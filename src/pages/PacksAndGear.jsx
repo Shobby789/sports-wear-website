@@ -1,9 +1,10 @@
 import React from "react";
+import PacksAndGearProducts from "../components/PacksAndGear/PacksAndGearProducts";
 
 const PacksAndGear = () => {
   return (
     <div>
-      <h1>PacksAndGear</h1>
+      <PacksAndGearProducts />
     </div>
   );
 };

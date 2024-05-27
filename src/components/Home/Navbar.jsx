@@ -23,9 +23,9 @@ const Navbar = () => {
       className={`w-full ${styles.paddingHorizontal} py-6 flex items-center justify-between `}
     >
       <div className="flex items-center gap-12">
-        <h1 className="text-white font-semibold text-2xl uppercase">
+        <Link to="/" className="text-white font-semibold text-2xl uppercase">
           sparta<span className="text-orange-600">x</span>
-        </h1>
+        </Link>
         <div className="hidden lg:flex items-center gap-6">
           <Link
             to="/shop-all"
@@ -34,19 +34,19 @@ const Navbar = () => {
             shop all
           </Link>
           <Link
-            to="/shop-all"
+            to="/men"
             className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             men
           </Link>
           <Link
-            to="/shop-all"
+            to="/women"
             className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             women
           </Link>
           <Link
-            to="/shop-all"
+            to="/packs-and-gear"
             className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             Packs & Gear
@@ -89,29 +89,23 @@ const Navbar = () => {
               shop all
             </Link>
             <Link
-              to="/shop-all"
+              to="/men"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               men
             </Link>
             <Link
-              to="/shop-all"
+              to="/women"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               women
             </Link>
             <Link
-              to="/shop-all"
+              to="/packs-and-gear"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               Packs & Gear
             </Link>
-            <Link
-              to="/shop-all"
-              className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
-            >
-              Packs & Gear
-            </Link>{" "}
             <Link
               to="/contact"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"

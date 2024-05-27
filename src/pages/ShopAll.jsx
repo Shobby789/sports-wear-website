@@ -1,9 +1,10 @@
 import React from "react";
+import Products from "../components/ShopAll/Products";
 
 const ShopAll = () => {
   return (
     <div>
-      <h1>ShopAll</h1>
+      <Products />
     </div>
   );
 };

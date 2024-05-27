@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 import { MdShoppingCart } from "react-icons/md";
 import { LuMenu } from "react-icons/lu";
 import { IoIosClose } from "react-icons/io";
+import CartSidebar from "./CartSidebar";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  const handleShowCart = () => {
+    setShowCart(!showCart);
+  };
 
   const handleNav = () => {
     setOpenNav(!openNav);
@@ -17,9 +23,9 @@ const Navbar = () => {
       className={`w-full ${styles.paddingHorizontal} py-6 flex items-center justify-between `}
     >
       <div className="flex items-center gap-12">
-        <h1 className="text-black font-semibold text-2xl uppercase">
+        <Link to="/" className="text-black font-semibold text-2xl uppercase">
           sparta<span className="text-orange-600">x</span>
-        </h1>
+        </Link>
         <div className="hidden lg:flex items-center gap-6">
           <Link
             to="/shop-all"
@@ -28,19 +34,19 @@ const Navbar = () => {
             shop all
           </Link>
           <Link
-            to="/shop-all"
+            to="/men"
             className="text-black font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             men
           </Link>
           <Link
-            to="/shop-all"
+            to="/women"
             className="text-black font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             women
           </Link>
           <Link
-            to="/shop-all"
+            to="/packs-and-gear"
             className="text-black font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             Packs & Gear
@@ -51,9 +57,10 @@ const Navbar = () => {
         <p className="text-sm text-black font-medium hover:text-orange-600 transition-all duration-300">
           $0.00
         </p>
-        <Link to="/cart">
+        <button onClick={handleShowCart}>
           <MdShoppingCart className="text-black text-lg hover:text-orange-600 transition-all duration-300" />
-        </Link>
+        </button>
+        <CartSidebar showCart={showCart} onclick={handleShowCart} />
         <button
           className="w-9 h-9 bg-orange-600 p-2 block lg:hidden"
           onClick={handleNav}
@@ -82,29 +89,23 @@ const Navbar = () => {
               shop all
             </Link>
             <Link
-              to="/shop-all"
+              to="/men"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               men
             </Link>
             <Link
-              to="/shop-all"
+              to="/women"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               women
             </Link>
             <Link
-              to="/shop-all"
+              to="/packs-and-gear"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               Packs & Gear
             </Link>
-            <Link
-              to="/shop-all"
-              className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
-            >
-              Packs & Gear
-            </Link>{" "}
             <Link
               to="/contact"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
