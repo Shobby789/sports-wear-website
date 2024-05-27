@@ -12,21 +12,21 @@ const FitnessReadySection = () => {
           <img
             src="https://img.freepik.com/free-photo/side-view-full-length-young-man-sportswear-running-treadmill-gym-muscular-young-man-blue-shorts-doing-exercises-motion-blur_639032-2736.jpg?t=st=1716772428~exp=1716776028~hmac=f2b88b56e970d2f5af23000d7e9b909af48ec7efd54577ad5cf4b82381098bc0&w=360"
             alt=""
-            className="w-full h-full brightness-50"
+            className="w-full h-full brightness-75"
           />
         </div>
         <div className="w-full h-full">
           <img
             src="https://img.freepik.com/free-photo/full-shot-fit-woman-gym_23-2149267061.jpg?t=st=1716772518~exp=1716776118~hmac=a47350a9264c60a093450925ed5760ab9e69fc4cec70e1a64d6fede66c438814&w=360"
             alt=""
-            className="w-full h-full brightness-50"
+            className="w-full h-full brightness-75"
           />
         </div>
         <div className="w-full h-full relative">
           <img
             src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="w-full h-full brightness-50"
+            className="w-full h-full brightness-75"
           />
           <div className="absolute bottom-10 right-5 flex flex-col gap-4 items-end text-end">
             <h1 className="text-white text-4xl font-semibold tracking-wide">

@@ -11,7 +11,7 @@ const Hero = () => {
         className={`w-full flex flex-col gap-10 ${styles.paddingHorizontal} h-5/6 justify-center py-12`}
       >
         <h1 className="text-white font-semibold text-6xl lg:text-8xl tracking-wide">
-          Let's Level Up Your <br /> Game
+          Let's Level Up Your <br /> span
         </h1>
         <p className="text-lg font-medium text-white tracking-wider">
           Nam natoque in massa bibendum lacus, et arcu cursus nisl <br /> rutrum
