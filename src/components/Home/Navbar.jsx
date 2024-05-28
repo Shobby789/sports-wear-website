@@ -57,8 +57,11 @@ const Navbar = () => {
         <p className="text-sm text-white font-medium hover:text-orange-600 transition-all duration-300">
           $0.00
         </p>
-        <button onClick={handleShowCart}>
-          <MdShoppingCart className="text-white text-lg hover:text-orange-600 transition-all duration-300" />
+        <button onClick={handleShowCart} className="relative">
+          <MdShoppingCart className="text-white text-xl hover:text-orange-600 transition-all duration-300" />
+          <span className="w-5 h-5 bg-white absolute rounded-full -top-3 -right-2 md:-right-3 text-[10px] text-black flex items-center justify-center">
+            0
+          </span>
         </button>
         <CartSidebar showCart={showCart} onclick={handleShowCart} />
         <button

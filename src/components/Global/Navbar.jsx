@@ -54,11 +54,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center gap-3 lg:gap-6">
-        <p className="text-sm text-black font-medium hover:text-orange-600 transition-all duration-300">
-          $0.00
-        </p>
-        <button onClick={handleShowCart}>
-          <MdShoppingCart className="text-black text-lg hover:text-orange-600 transition-all duration-300" />
+        <p className="text-sm font-medium text-orange-600">$0.00</p>
+        <button onClick={handleShowCart} className="relative">
+          <MdShoppingCart className="text-xl text-orange-600" />
+          <span className="w-5 h-5 bg-orange-600 absolute rounded-full -top-3 -right-2 md:-right-3 text-[10px] text-white flex items-center justify-center">
+            0
+          </span>
         </button>
         <CartSidebar showCart={showCart} onclick={handleShowCart} />
         <button
