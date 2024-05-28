@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { Backpack } from "../../assets/export";
 import { IoCloseOutline } from "react-icons/io5";
@@ -7,6 +7,11 @@ import { GoPlus } from "react-icons/go";
 import { HiMinusSmall } from "react-icons/hi2";
 
 const CartSidebar = ({ showCart, onclick }) => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/cart");
+    onclick();
+  };
   return (
     <div
       className={`w-full h-screen fixed top-0 bottom-0 left-0 right-0 bg-transparent tracking-wide ${
@@ -187,12 +192,12 @@ const CartSidebar = ({ showCart, onclick }) => {
             <span className="text-lg font-light text-gray-400">$109.00</span>
           </div>
           <div className="w-full px-6 pt-2">
-            <Link
-              to="/cart"
+            <button
+              onClick={handleNavigate}
               className="w-full py-2 text-white block uppercase text-sm font-medium text-center bg-orange-600"
             >
               view Cart
-            </Link>
+            </button>
           </div>
           <div className="w-full px-6 py-2">
             <Link
