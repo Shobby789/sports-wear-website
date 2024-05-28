@@ -7,6 +7,7 @@ const Men = lazy(() => import("../pages/Men"));
 const Women = lazy(() => import("../pages/Women"));
 const PacksAndGear = lazy(() => import("../pages/PacksAndGear"));
 const Cart = lazy(() => import("../pages/Cart"));
+const Checkout = lazy(() => import("../pages/Checkout"));
 
 export const routes = [
   {
@@ -15,28 +16,33 @@ export const routes = [
     page: <Home />,
   },
   {
-    title: "Home Page",
+    title: "All Products Page",
     url: "/shop-all",
     page: <Layout pages={<ShopAll />} />,
   },
   {
-    title: "Home Page",
+    title: "Men Products Page",
     url: "/men",
     page: <Layout pages={<Men />} />,
   },
   {
-    title: "Home Page",
+    title: "Women Products Page",
     url: "/women",
     page: <Layout pages={<Women />} />,
   },
   {
-    title: "Home Page",
+    title: "Packs % Gear Page",
     url: "/packs-and-gear",
     page: <Layout pages={<PacksAndGear />} />,
   },
   {
-    title: "Home Page",
+    title: "Cart Page",
     url: "/cart",
     page: <Layout pages={<Cart />} />,
+  },
+  {
+    title: "Checkout Page",
+    url: "/checkout",
+    page: <Layout pages={<Checkout />} />,
   },
 ];
