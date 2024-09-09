@@ -9,11 +9,18 @@ const PacksAndGear = lazy(() => import("../pages/PacksAndGear"));
 const Cart = lazy(() => import("../pages/Cart"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 
+const ProductPage = lazy(() => import("../pages/ProductPage"));
+
 export const routes = [
   {
     title: "Home Page",
     url: "/",
     page: <Home />,
+  },
+  {
+    title: "Home Page",
+    url: "/products/product/1232435",
+    page: <Layout pages={<ProductPage />} />,
   },
   {
     title: "All Products Page",
