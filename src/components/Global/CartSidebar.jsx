@@ -201,7 +201,7 @@ const CartSidebar = ({ showCart, onclick }) => {
           </div>
           <div className="w-full px-6 py-2">
             <Link
-              to="/cart"
+              to="/checkout"
               className="w-full py-2 text-white block uppercase text-sm font-medium text-center bg-orange-600"
             >
               checkout
