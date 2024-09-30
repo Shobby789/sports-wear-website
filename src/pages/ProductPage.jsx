@@ -1,9 +1,11 @@
 import React from "react";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
+import { styles } from "../styles/styles";
 
 const ProductPage = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
-      <h1>We are developing the site.</h1>
+    <div className={`w-full ${styles.paddingHorizontal} py-12`}>
+      <ProductDetails />
     </div>
   );
 };

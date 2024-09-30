@@ -1,0 +1,120 @@
+import React from "react";
+import { Backpack } from "../../assets/export";
+import ProductCard from "../Global/ProductCard";
+
+const ProductDetails = () => {
+  return (
+    <div className="w-full py-12 px-4 lg:p-20 bg-white">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="w-full h-[280px] lg:h-full bg-gray-100 flex items-center justify-center">
+          <img
+            src={Backpack}
+            alt="product-image"
+            className="object-contain w-2/3"
+          />
+        </div>
+        <div className="flex flex-col items-start gap-4">
+          <p className="font-light text-gray-500 text-[15px] tracking-wider">
+            Home / Women / Tempor id backpack 8L
+          </p>
+          <p className="font-light text-gray-500 text-[15px] tracking-wider">
+            Bags
+          </p>
+          <h2 className="font-medium text-[24px] tracking-wider">
+            Tempor id backpack 8L
+          </h2>
+          <p className="font-medium text-[24px] tracking-wider">$64.80</p>
+          <p className="font-light text-gray-500 text-[16px] tracking-wider">
+            Id eget magna velit lectus dui est, pellentesque dignissim
+            sollicitudin accumsan in maecenas vitae dignissim bibendum feugiat
+            purus morbi dui rhoncus elementum odio amet.
+          </p>
+          <div className="w-full flex items-center gap-4">
+            <div className="flex items-center">
+              <button className="text-xl font-light text-gray-500 w-9 h-9 border flex items-center justify-center">
+                -
+              </button>
+              <div className="w-9 h-9 border flex items-center justify-center">
+                <span className="text-sm text-gray-500">1</span>
+              </div>
+              <button className="text-xl font-light text-gray-500 w-9 h-9 border flex items-center justify-center">
+                +
+              </button>
+            </div>
+
+            <button className="bg-orange-600 text-white px-7 md:px-16 py-2 rounded-full text-sm tracking-wider uppercase">
+              Add To Cart
+            </button>
+          </div>
+          <div className="w-full border" />
+          <div className="flex items-center flex-wrap gap-6">
+            <span className="font-light text-gray-500 text-[15px] tracking-wider">
+              Category: Women{" "}
+            </span>
+            <span className="font-light text-gray-500 text-[15px] tracking-wider">
+              Tags: backpack, hiking, women
+            </span>
+          </div>
+          <div>
+            <p className="font-medium text-gray-600 text-[16px] tracking-wider">
+              Guaranteed Safe Checkout
+            </p>
+            <div className="border py-4 px-6 rounded mt-4 flex items-center gap-4">
+              <img
+                src="/Visa-Card-Payment-PNG.png"
+                alt="Visa-Card-Payment-PNG"
+                className="w-10"
+              />
+              <img
+                src="/maser-card.png"
+                alt="Visa-Card-Payment-PNG"
+                className="w-10"
+              />
+              <img
+                src="/atm-card.png"
+                alt="Visa-Card-Payment-PNG"
+                className="w-10"
+              />
+              <img
+                src="/paypal.png"
+                alt="Visa-Card-Payment-PNG"
+                className="w-14 bg-gray-100 h-6 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full border-t mt-10 pt-6 flex flex-col items-start gap-4">
+        <h3 className="font-medium text-[18px] tracking-wider">Description</h3>
+        <p className="font-light text-gray-500 text-[16px] tracking-wider">
+          Adipiscing nisi, lectus sit pharetra nunc, sit mi egestas sit velit
+          tristique quisque et amet odio donec mauris integer imperdiet arcu
+          orci, dignissim id duis dictum malesuada nunc, tempor felis.
+        </p>
+        <p className="font-light text-gray-500 text-[16px] tracking-wider">
+          Arcu vitae commodo in morbi tortor, id odio ullamcorper elit cras
+          tempus libero ac, duis lorem rhoncus, purus ultrices tempor, egestas
+          dignissim arcu, nunc ullamcorper massa ultrices gravida in orci eu
+          pulvinar viverra egestas egestas feugiat sit ultricies eu faucibus
+          facilisis nibh dui mauris ornare lacus sapien a duis ut tempor,
+          aliquam arcu, facilisi cras sed integer mauris sem integer cursus
+          consequat aliquet turpis.
+        </p>
+      </div>
+
+      <div className="w-full mt-16 flex flex-col items-start gap-4">
+        <h3 className="font-semibold text-[16px] lg:text-3xl tracking-wider">
+          Related Products
+        </h3>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductDetails;
