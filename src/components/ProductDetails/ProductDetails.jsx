@@ -1,29 +1,52 @@
-import React from "react";
-import { Backpack } from "../../assets/export";
+import React, { useEffect } from "react";
 import ProductCard from "../Global/ProductCard";
+import { useLocation, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
+  const location = useLocation();
+  const { title } = useParams();
+
+  useEffect(() => {
+    document.title = `Spartax - ${title}`;
+  }, []);
+
   return (
     <div className="w-full py-12 px-4 lg:p-20 bg-white">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="w-full h-[280px] lg:h-full bg-gray-100 flex items-center justify-center">
+        <div className="w-full h-[280px] lg:h-[540px] bg-gray-100 flex items-center justify-center">
           <img
-            src={Backpack}
+            src={location?.state?.product?.image}
             alt="product-image"
-            className="object-contain w-2/3"
+            className="object-contain w-full h-full"
           />
         </div>
         <div className="flex flex-col items-start gap-4">
           <p className="font-light text-gray-500 text-[15px] tracking-wider">
-            Home / Women / Tempor id backpack 8L
+            Home /{" "}
+            {location?.state?.product?.category == "men"
+              ? "Men"
+              : location?.state?.product?.category == "women"
+              ? "Women"
+              : location?.state?.product?.category == "shoes"
+              ? "Shoes"
+              : "Packs & Gear"}{" "}
+            / {title}
           </p>
           <p className="font-light text-gray-500 text-[15px] tracking-wider">
-            Bags
+            {location?.state?.product?.category === "men"
+              ? "Men"
+              : location?.state?.product?.category === "women"
+              ? "Women"
+              : location?.state?.product?.category === "shoes"
+              ? "Shoes"
+              : "Packs $ Gear"}
           </p>
           <h2 className="font-medium text-[24px] tracking-wider">
-            Tempor id backpack 8L
+            {location?.state?.product?.title}
           </h2>
-          <p className="font-medium text-[24px] tracking-wider">$64.80</p>
+          <p className="font-medium text-[24px] tracking-wider">
+            ${location?.state?.product?.price}
+          </p>
           <p className="font-light text-gray-500 text-[16px] tracking-wider">
             Id eget magna velit lectus dui est, pellentesque dignissim
             sollicitudin accumsan in maecenas vitae dignissim bibendum feugiat
@@ -49,10 +72,17 @@ const ProductDetails = () => {
           <div className="w-full border" />
           <div className="flex items-center flex-wrap gap-6">
             <span className="font-light text-gray-500 text-[15px] tracking-wider">
-              Category: Women{" "}
+              Category:{" "}
+              {location?.state?.product?.category === "men"
+                ? "Men"
+                : location?.state?.product?.category === "women"
+                ? "Women"
+                : location?.state?.product?.category === "shoes"
+                ? "Shoes"
+                : ""}
             </span>
             <span className="font-light text-gray-500 text-[15px] tracking-wider">
-              Tags: backpack, hiking, women
+              Tags: backpack, hiking, women, men
             </span>
           </div>
           <div>
@@ -103,7 +133,7 @@ const ProductDetails = () => {
         </p>
       </div>
 
-      <div className="w-full mt-16 flex flex-col items-start gap-4">
+      {/* <div className="w-full mt-16 flex flex-col items-start gap-4">
         <h3 className="font-semibold text-[16px] lg:text-3xl tracking-wider">
           Related Products
         </h3>
@@ -112,7 +142,7 @@ const ProductDetails = () => {
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

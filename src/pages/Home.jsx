@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Home/Hero";
 import ShopByCategory from "../components/Home/ShopByCategory";
 import TrendingSportsWear from "../components/Home/TrendingSportsWear";
@@ -10,6 +10,9 @@ import ExploreCollections from "../components/Home/ExploreCollections";
 import Footer from "../components/Global/Footer";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home - Sports Wear Store";
+  }, []);
   return (
     <div className="bg-gray-50">
       <Hero />

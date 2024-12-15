@@ -19,7 +19,7 @@ export const routes = [
   },
   {
     title: "Home Page",
-    url: "/products/product/1232435",
+    url: "/products/:title",
     page: <Layout pages={<ProductPage />} />,
   },
   {
@@ -39,7 +39,7 @@ export const routes = [
   },
   {
     title: "Packs % Gear Page",
-    url: "/packs-and-gear",
+    url: "/packs-gear",
     page: <Layout pages={<PacksAndGear />} />,
   },
   {

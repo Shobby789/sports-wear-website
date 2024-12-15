@@ -46,7 +46,7 @@ const Navbar = () => {
             women
           </Link>
           <Link
-            to="/packs-and-gear"
+            to="/packs-gear"
             className="text-black font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             Packs & Gear
@@ -102,17 +102,17 @@ const Navbar = () => {
               women
             </Link>
             <Link
-              to="/packs-and-gear"
+              to="/packs-gear"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               Packs & Gear
             </Link>
-            <Link
+            {/* <Link
               to="/contact"
               className="text-black font-normal text-base uppercase hover:text-orange-600 transition-all duration-300"
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

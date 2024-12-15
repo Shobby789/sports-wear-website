@@ -9,10 +9,10 @@ const ShopByCategory = () => {
     >
       <h1 className="text-2xl font-bold">Shop by Category</h1>
       <div className="w-full mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
+        <CategoryCard image={"/men-sports-wear.jpg"} title={"Men"} />
+        <CategoryCard image={"/women-sports-wear.jpg"} title={"Women"} />
+        <CategoryCard image={"/shoes.jpg"} title={"Shoes"} />
+        <CategoryCard image={"/sports-shoes.jpg"} title={"Style"} />
       </div>
     </section>
   );

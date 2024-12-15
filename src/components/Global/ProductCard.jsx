@@ -1,22 +1,28 @@
 import React from "react";
-import { Backpack } from "../../assets/export";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/products/${product?.title}`, { state: { product } });
+  };
   return (
-    <Link to="/products/product/1232435">
-      <div className="relative">
-        <img src={Backpack} alt="" className="bg-gray-200 py-4" />
-        <div className="w-full px-4 pt-1">
-          <h1 className="text-base font-semibold tracking-wide">
-            Tempor id backpack 8L
-          </h1>
-          <p className="text-sm font-semibold text-gray-400 tracking-wide">
-            $64.80
-          </p>
-        </div>
+    <div className="relative w-full cursor-pointer" onClick={handleNavigate}>
+      <img
+        src={product?.image}
+        alt=""
+        className="bg-[#ebebed] py-4 h-[280px] w-full object-contain"
+      />
+      <div className="w-full px-4 pt-1">
+        <h1 className="text-base font-semibold tracking-wide">
+          {product?.title}
+        </h1>
+        <p className="text-sm font-semibold text-gray-400 tracking-wide">
+          <span className="line-through">${product?.discountedPrice}</span>{" "}
+          <span className="text-black ml-1">${product?.price}</span>
+        </p>
       </div>
-    </Link>
+    </div>
   );
 };
 
