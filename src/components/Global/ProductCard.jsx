@@ -7,11 +7,14 @@ const ProductCard = ({ product }) => {
     navigate(`/products/${product?.title}`, { state: { product } });
   };
   return (
-    <div className="relative w-full cursor-pointer" onClick={handleNavigate}>
+    <div
+      className="relative w-full cursor-pointer overflow-hidden"
+      onClick={handleNavigate}
+    >
       <img
         src={product?.image}
-        alt=""
-        className="bg-[#ebebed] py-4 h-[280px] w-full object-contain"
+        alt={product?.title}
+        className="bg-[#ebebed] h-[280px] w-full object-contain"
       />
       <div className="w-full px-4 pt-1">
         <h1 className="text-base font-semibold tracking-wide">

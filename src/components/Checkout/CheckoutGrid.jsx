@@ -13,7 +13,7 @@ const CheckoutGrid = () => {
       <div className="w-full bg-white px-4 lg:px-20 pb-12">
         <button
           disabled
-          className="w-full py-3 text-white font-medium text-base bg-orange-600"
+          className="w-full py-3 text-white font-medium text-base bg-orange-600 disabled:cursor-not-allowed"
         >
           Place Order
         </button>

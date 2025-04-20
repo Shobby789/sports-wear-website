@@ -15,7 +15,7 @@ export const routes = [
   {
     title: "Home Page",
     url: "/",
-    page: <Home />,
+    page: <Layout pages={<Home />} />,
   },
   {
     title: "Home Page",

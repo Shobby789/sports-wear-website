@@ -46,7 +46,7 @@ const Navbar = () => {
             women
           </Link>
           <Link
-            to="/packs-and-gear"
+            to="/packs-gear"
             className="text-white font-medium text-sm uppercase hover:text-orange-600 transition-all duration-300"
           >
             Packs & Gear

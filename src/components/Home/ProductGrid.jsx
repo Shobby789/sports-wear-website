@@ -3,6 +3,7 @@ import { styles } from "../../styles/styles";
 import { Link } from "react-router-dom";
 import ProductCard from "../Global/ProductCard";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { LATEST_DROP_PRODUCTS } from "../../constants/theLatestDropProducts";
 
 const ProductGrid = () => {
   return (
@@ -19,10 +20,9 @@ const ProductGrid = () => {
         </Link>
       </div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {LATEST_DROP_PRODUCTS?.map((product, index) => {
+          return <ProductCard product={product} key={index} />;
+        })}
       </div>
     </section>
   );

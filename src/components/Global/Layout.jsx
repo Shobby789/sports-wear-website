@@ -2,11 +2,14 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SubscribeSection from "./SubscribeSection";
+import { useLocation } from "react-router-dom";
 
 const Layout = ({ pages }) => {
+  const location = useLocation();
+  console.log("location >>>>", location);
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
+      {location?.pathname !== "/" && <Navbar />}
       <div className="w-full bg-gray-50">{pages}</div>
       <SubscribeSection />
       <Footer />

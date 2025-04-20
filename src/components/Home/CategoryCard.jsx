@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const CategoryCard = ({ image, url, title }) => {
   return (
@@ -12,9 +13,12 @@ const CategoryCard = ({ image, url, title }) => {
         width: "100%",
       }}
     >
-      <button className="px-6 py-2.5 rounded-full bg-gray-100 tracking-wide uppercase font-normal text-sm flex items-center gap-1 absolute lg:bottom-10 bottom-5 left-5 lg:left-10">
+      <Link
+        to={url}
+        className="px-6 py-2.5 rounded-full bg-gray-100 tracking-wide uppercase font-normal text-sm flex items-center gap-1 absolute lg:bottom-10 bottom-5 left-5 lg:left-10"
+      >
         {title} <HiArrowLongRight className="text-base" />
-      </button>
+      </Link>
     </div>
   );
 };
